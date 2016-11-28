@@ -1,0 +1,31 @@
+<div class="container index-wrapper">
+  <div class="col-md-12 text-center">
+    <div class="search col-md-8 col-md-offset-2">
+      <h1>Nearest Beer</h1>
+      <% if flash %>
+      <div class="error-messages">
+        <p><%= flash[:error] %></p>
+      </div>
+      <% end %>
+      <%= simple_form_for :location, method: :get, url: '/search', html: { class: 'form-horizontal' } do |f| %>
+        <%= f.input :address, label: false, placeholder: 'Enter your address…', required: true %>
+        <%= f.input :search_type, as: :hidden %>
+    </div>
+    <div class="drink-in col-md-4 col-md-offset-2">
+      <%= f.submit 'Drink In', class: 'search-submit button button-secondary', data: { search_type: 'bar' } %>
+    </div>
+    <div class="take-away col-md-4">
+      <%= f.submit 'Take Away', class: 'search-submit button button-primary', data: { search_type: 'liquor_store' } %>
+    </div>
+      <% end %>
+    </section>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.search-submit').on('click', function() {
+        $('#location_search_type').val($(this).data('searchType'));
+    });
+});
+</script>
