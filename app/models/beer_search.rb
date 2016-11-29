@@ -1,3 +1,5 @@
+require 'google_places'
+
 class BeerSearch
   def initialize(search_params)
     @search_params = search_params
