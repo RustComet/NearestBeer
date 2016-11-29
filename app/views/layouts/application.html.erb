@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nearest.Beer</title>
+    <title>Nearest Beer</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <meta name="description" content="Beer that's near">
+    <meta name="description" content="Find the nearest open bar or bottle shop, fast.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Facebook sharing meta -->
+    <meta property="og:url"                content="http://nearest.beer" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Nearest Beer" />
+    <meta property="og:description"        content="Find the nearest open bar or bottle shop, fast." />
+    <!-- <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" /> -->
 
     <!-- Google Analytics -->
     <script>
