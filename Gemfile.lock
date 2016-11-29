@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/RustComet/google_places.git
+  remote: https://github.com/RustComet/google_places
   revision: 4344faa6f4993019fdac6ea229e05558a9a1f6e0
   specs:
     google_places (0.32.0)
