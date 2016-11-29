@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'simple_form'
-gem 'google_places', git: 'https://github.com/RustComet/google_places'
+gem 'rusty_google_places'
 gem 'foursquare2'
 gem 'geocoder'
 gem 'httparty'
