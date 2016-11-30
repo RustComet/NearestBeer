@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   def search
     @search_result ||= beer_search.search_result
     unless @search_result
-      flash[:error] = "Sorry, looks like there's no beer nearby"
+      flash[:error] = "Oops, we can't find anything nearby"
       return redirect_to root_path
     end
     @map_link = google_maps_link

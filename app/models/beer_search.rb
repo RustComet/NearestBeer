@@ -18,6 +18,7 @@ class BeerSearch
   end
 
   def google_results
+    return [] unless lat && lon
     @google_result ||= google_places.spots(lat, lon, opennow: 'openow', rankby: 'distance', types: search_type, verify: false)
   end
 
@@ -30,10 +31,12 @@ class BeerSearch
   end
 
   def lat
+    return nil unless geocode_results.first
     geocode_results.first.geometry['location']['lat']
   end
 
   def lon
+    return nil unless geocode_results.first
     geocode_results.first.geometry['location']['lng']
   end
 
