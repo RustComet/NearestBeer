@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NearestBeer</title>
+    <title>Nearest Beer</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="description" content="Find the nearest open bar or bottle shop, fast.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <%= favicon_link_tag 'logo.png', rel: 'apple-touch-icon', type: 'image/png' %>
+
+    <!-- Facebook sharing meta -->
+    <meta property="og:url"                content="http://nearest.beer" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="Nearest Beer" />
+    <meta property="og:description"        content="Find the nearest open bar or bottle shop, fast." />
+    <meta property="og:image"              content="https://s3-ap-southeast-2.amazonaws.com/seven-ounce/seven+ounce.png" />
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-88195027-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </head>
 
   <body>
