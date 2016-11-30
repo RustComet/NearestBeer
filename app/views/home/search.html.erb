@@ -2,12 +2,14 @@
   <div class="col-md-12 text-center">
     <div class="results col-md-8 col-md-offset-2">
       <h3 id="results-heading">Your Nearest Beer Is:</h3>
-      <h1>
-        <%= @search_result&.name %>
-      </h1>
-      <h3>
-        <%= @search_result&.vicinity %>
-      </h3>
+      <div class="search-result">
+        <h1>
+          <%= @search_result&.name %>
+        </h1>
+        <h3>
+          <%= @search_result&.vicinity %>
+        </h3>
+      </div>
     </div>
       <div class="col-md-4 col-md-offset-2 search-again">
         <%= button_to 'Search Again', root_path, method: :get, class: 'button button-secondary' %>
